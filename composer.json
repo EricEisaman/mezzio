@@ -1,0 +1,28 @@
+{
+    "name": "mezzio",
+    "description": "PHP microservice",
+    "keywords": ["microframework", "rest", "router", "psr7"],
+    "homepage": "https://cs1.netlify.com",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.0",
+        "monolog/monolog": "^1.17",
+        "mezzio/mezzio-authentication":"^1.0",
+        "mezzio/mezzio-swoole":"^1.0",
+        "mezzio/mezzio-skeleton":"^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=4.8 < 6.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+	"scripts": {
+        "start": "php -S 0.0.0.0:8080 -t  svc public/index.php",
+        "test": "phpunit"
+	}
+ 
+}
+ 
